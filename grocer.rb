@@ -14,6 +14,7 @@ end
 def apply_coupons(cart, coupons)
 # cart_with_coupons = {}
 # cup_item = nil
+binding.pry
 coupons.each do |has_coupon|
   with_coupon = has_coupon[:item]
   if cart[with_coupon] && cart[with_coupon][:count] >= has_coupon[:num]
