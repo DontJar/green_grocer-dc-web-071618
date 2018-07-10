@@ -34,9 +34,10 @@ end
 
 def apply_clearance(cart)
   cart.each do |food, info|
-binding.pry
+    if info[:clearance] == true
+      info[:price] = info[:price]*.8
+    end
   end
-  # code here
 end
 
 def checkout(cart, coupons)
