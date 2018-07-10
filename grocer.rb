@@ -33,7 +33,7 @@ end
 
 
 def apply_clearance(cart)
-  pry
+  binding.pry
   # code here
 end
 
