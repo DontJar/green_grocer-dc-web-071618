@@ -42,8 +42,11 @@ end
 def checkout(cart, coupons)
   small_cart = consolidate_cart(cart)
   coupons_applied = apply_coupons(small_cart, coupons)
-  
   checking_out = apply_clearance(coupons_applied)
   total_cost = nil
-
+  checking_out.each do |food, info|
+    total_cost = total_cost + info[:price]*info[:count]
+end
+total_cost = total_cost*.09 if total_cost >= 100
+total_cost
 end
