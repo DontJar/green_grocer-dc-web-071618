@@ -44,5 +44,5 @@ def checkout(cart, coupons)
   coupons_applied = apply_coupons(small_cart, coupons)
   checkout_cart = apply_coupons(coupons_applied)
   total_cost = nil
-  pry
+  binding.pry
 end
