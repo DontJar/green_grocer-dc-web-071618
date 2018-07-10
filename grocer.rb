@@ -20,6 +20,9 @@ coupons.each do |has_coupon|
   if cart[with_coupon] && cart[with_coupon][:count] >= has_coupon[:num]
     if cart["#{with_coupon} W/ COUPON"]
       if cart["#{with_coupon} W/ COUPON"]
+      end
+    end
+  end
 end
 
 
