@@ -33,6 +33,7 @@ end
 
 
 def apply_clearance(cart)
+  pry
   # code here
 end
 
