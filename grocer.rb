@@ -25,7 +25,7 @@ coupons.each do |has_coupon|
     end
     cart[with_coupon][:count] -= has_coupon[:num]
   end
-  binding.pry
+  # binding.pry
   cart
 end
 # cart_with_coupons
