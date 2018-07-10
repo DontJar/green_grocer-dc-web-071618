@@ -21,10 +21,10 @@ coupons.each do |has_coupon|
     if cart["#{with_coupon} W/ COUPON"] #!= nil
       cart["#{with_coupon} W/ COUPON"] =+ 1
     else
-      cart["#{with_coupon} W/ COUPON"] = {count: 1, price: coupon[:cost]}
+      cart["#{with_coupon} W/ COUPON"] = {count: 1, price: has_coupon[:cost]}
       cart["#{with_coupon} W/ COUPON"][:clearance] = cart[with_coupon][:clearance]
     end
-    cart[with_coupon][:count] -= coupon[:num]
+    cart[with_coupon][:count] -= has_coupon[:num]
   end
   cart
 end
