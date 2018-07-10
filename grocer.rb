@@ -56,7 +56,7 @@ coupons.each do |has_coupon|
 
   cart
 
-end
+
 
 end
 
