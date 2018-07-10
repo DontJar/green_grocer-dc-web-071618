@@ -18,7 +18,7 @@ def apply_coupons(cart, coupons)
 coupons.each do |has_coupon|
   with_coupon = has_coupon[:item]
     if cart[with_coupon] && cart[with_coupon][:count] >= has_coupon[:num]
-      if cart["#{with_coupon} W/COUPON"] != nil
+      if cart["#{with_coupon} W/COUPON"] #!= nil
         cart["#{with_coupon} W/ COUPON"][:count] += 1
       else
         cart["#{with_coupon} W/COUPON"] = {:count => 1, :price => has_coupon[:cost]}
