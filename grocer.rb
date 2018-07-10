@@ -47,6 +47,10 @@ def checkout(cart, coupons)
   checking_out.each do |food, info|
     total_cost = total_cost + info[:price]*info[:count]
 end
-total_cost = total_cost*.09 if total_cost >= 100
-total_cost
+  if total_cost >= 100
+    total_cost = total_cost*.09
+    total_cost
+  else
+    total_cost
+  end
 end
