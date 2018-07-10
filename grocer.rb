@@ -36,7 +36,7 @@ def apply_clearance(cart)
   cart.each do |food, info|
     if info[:clearance] == true
       binding.pry
-      info[:price] = info[:price]*0.8.round(2)
+      info[:price] = amount(info[:price]*0.8, :minimum_precision => 2)
     end
   end
 end
